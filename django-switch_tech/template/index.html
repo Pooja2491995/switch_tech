@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <title>Quiz</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+
+      .container {
+        background-color: rgba(17, 163, 161, 0.453);
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 40px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      label {
+        font-size: px;
+        font-weight: bold;
+        color: #111417;
+      }
+
+      hr {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5 pt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <form action="">
+            <div class="form-group">
+              <label for="">Hello, {{user.username}}</label>
+              <hr>
+              <label for="">Which technology do you want to learn?</label>
+              <hr>
+              <select class="form-control" name="category">
+                <option value="">Choose</option>
+                {% for category in categories %}
+                  <option value="{{category.category_name}}">{{category.category_name}}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <button class="btn btn-primary mt-3">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

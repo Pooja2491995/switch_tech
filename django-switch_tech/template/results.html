@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Results</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+		}
+		h1 {
+			margin: 0;
+			font-size: 36px;
+		}
+		main {
+			padding: 20px;
+			max-width: 800px;
+			margin: 0 auto;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+		.score {
+			flex-basis: 100%;
+			text-align: center;
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		.recommendations {
+			flex-basis: 100%;
+			margin-bottom: 20px;
+		}
+		.course {
+			margin-bottom: 20px;
+		}
+		.course-type {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		.course-rating {
+			font-size: 14px;
+			margin-bottom: 5px;
+		}
+		.course-link {
+			font-size: 18px;
+			color: blue;
+			text-decoration: underline;
+		}
+        .logo {
+			width: 200px;
+            height: 200px;
+            top: 200;
+            left: 0;
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Quiz Results</h1>
+		<img align ="left" class="logo" src="https://static.ambitionbox.com/assets/v2/images/rs:fit:200:200:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL3JhdG5hLWdsb2JhbC10ZWNobm9sb2dpZXMuanBn.webp" alt="Logo">
+        
+	</header>
+	<main>
+		<div class="score">
+			<p>Your Score is: {{score}}</p>
+		</div>
+		<div class="recommendations">
+			<h2>Here are Your Recommendations</h2>
+			<div class="course">
+				<u><div class="course-type">Paid Course: </div></u>
+                <div class="course-name">Course Name: </div>
+				<div class="course-rating">Rating: </div>
+                
+				<div class="course-link"><a href="{{ suggested }}">Go to course</a></div><hr>
+			</div>
+			<!-- <div class="course">
+				<u><div class="course-type">Free Course:</div></u>
+                <div class="course-name">Course Name: </div>
+				<div class="course-rating">Rating: </div>
+				<div class="course-link"><a href="#">Go to course</a></div>
+			</div> -->
+		</div>
+	</main>
+</body>
+</html>

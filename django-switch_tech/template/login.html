@@ -1,0 +1,46 @@
+{% extends 'dependencies.html' %}
+{% load static%}
+{% block content %}
+
+<!-- testing_otp_code -->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>RGT Login</title><br><br>
+        <h2><center>Switch Tech System</center></h2>
+        <center><img src="https://static.ambitionbox.com/assets/v2/images/rs:fit:200:200:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL3JhdG5hLWdsb2JhbC10ZWNobm9sb2dpZXMuanBn.webp" alt="Charminar"> </center><br>
+       
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script>
+            function passvalues() {
+                const email = document.getElementById("mail").value
+                localStorage.setItem('email',email);
+                return false;
+        
+            }
+        </script>
+        <style>
+            label{
+             margin-right: 50px;
+         }
+        </style>
+    </head>
+</html>
+
+<!-- testing_otp_code -->
+<div class="container jumbotron">
+    <!-- <div class=""></div> -->
+    <div style="text-align:center"> <br><br>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <label for="Employee">Username:</label>
+        <input type="text" name="username" placeholder="Username"><br>
+        <!-- <p><input type="password" name="password" placeholder="Password..." ></p> -->
+        <label for="fname">Email:     </label>
+        <input style="margin-left:30px" type="text"  name="mail"  id= "mail" pattern=".+@ratnaglobaltech\.com" placeholder="Your Email"> <br>
+        <!-- <input id= "mail" type="text" name="mail" placeholder="Your Email"> <br> -->
+        <!-- <p><input type="password" name="password" placeholder="OTP" ></p> --><br>
+        <input class="btn btn-success" type="submit" value="Send OTP" onclick="passvalues()">
+    </form>
+</div>
+{% endblock %}

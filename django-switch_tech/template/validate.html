@@ -1,0 +1,31 @@
+{% extends 'dependencies.html' %}
+{% load static%}
+{% block content %}
+
+<div class="container jumbotron" style="background-color:rgb(255, 255, 255);">
+    <form method="POST" action="validate/">
+        {% csrf_token %}
+        <div style="text-align:center"> <br><br>
+            <h2> Switching Tech System</h2>
+            <!-- <script type="text/javascript">
+                function preventBack() { window.history.forward(); }
+                setTimeout("preventBack()", 0);
+                window.onunload = function () { null };
+           </script> -->
+        <img src="https://static.ambitionbox.com/assets/v2/images/rs:fit:200:200:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL3JhdG5hLWdsb2JhbC10ZWNobm9sb2dpZXMuanBn.webp" alt="Charminar"> <br><br>
+        
+        <!-- <p><input type="text" name="Employee ID" placeholder="Employee ID"></p> -->
+        <label for="fname">Employee mail:</label>
+        <input id="mail" type="text" name="mail" placeholder="RGT EMAIL ID" readonly ><br><br>
+        <label for="fname">OTP:</label>
+        <input type="text" name="otp" >
+        <!-- <p><input type="password" name="password" placeholder="OTP" ></p> -->
+        <input class="btn btn-success" type="submit" value="Validate OTP" onclick=Validate()>        
+    </form>
+    <script>
+        document.getElementById("mail").value = localStorage.getItem("email")
+        
+    </script>
+</div>
+
+{% endblock %}

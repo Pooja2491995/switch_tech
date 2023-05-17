@@ -1,0 +1,41 @@
+Steps to setup "switching tech" project in python Django
+
+STEP 1:
+	•	Install python from www.python.org/downloads [ download .exe installable ]
+
+	•	Install python and check add to path checkbox one start page, install to default location
+
+	•	Create project folder
+
+	•	Open Command Prompt in project folder path and create python virtual environment.
+			python –m venv venv 
+
+STEP 2:
+	•	In CMD navigate cd venv / Scripts from project folder
+
+	•	Type activate. And find the venv is activated in your CMD
+
+	•	Navigate back to project folder by [ cd .. /.. ] in CMD
+
+STEP 3:
+
+	•	In venv activated CMD install Django Latest version using pip
+			o pip install Django [ wait for it to complete]
+
+	•	In same CMD cd to install requirements.txt
+			o pip install –r requirments.txt [ wait for it to install all packages]
+
+	•	In same CMD cd switch_tech folder 
+
+	•	Run the project by:
+			o python manage.py runserver 
+
+	•	You will now see the server is running and showing some URL to follow.
+			oDefault is http://127.0.0.1:8000/ 
+
+	•	Follow this URL in any browser to see your project. 
+
+
+Any confusions  follow official documentations:  https://docs.djangoproject.com/en/4.1/topics/install/
+
+Thank you
